@@ -6,41 +6,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Collections</title>
   <style>
+    * { box-sizing: border-box; }
+
     body {
+      margin: 0;
+      padding: 40px 20px;
       font-family: Arial, sans-serif;
       background: #f7f4ef;
       color: #333;
       text-align: center;
-      padding: 40px 20px;
     }
+
+    h1 { margin-bottom: 10px; }
+
+    .subtitle {
+      color: #777;
+      margin-bottom: 35px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     .card {
       background: white;
-      padding: 24px;
-      margin: 16px auto;
-      max-width: 400px;
-      border-radius: 12px;
+      padding: 28px 20px;
+      border-radius: 14px;
+      box-shadow: 0 3px 12px #0000000a;
     }
-    a {
-      color: #66513e;
+
+    .emoji { font-size: 36px; }
+
+    .card p {
+      color: #777;
+      line-height: 1.5;
+      min-height: 42px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #3d3a35;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .button:hover { background: #625b50; }
+
+    footer {
+      margin-top: 40px;
+      color: #888;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
   <h1>My Collections</h1>
-  <p>Welcome to my personal collection hub!</p>
+  <p class="subtitle">
+    One place to explore all my personal collections
+  </p>
 
-  <div class="card">
-    <h2>Stamp Collection</h2>
-    <a href="https://jeat-98.github.io/stamp-collection/">
-      Visit Website →
-    </a>
-  </div>
+  <main class="collections">
 
-  <div class="card">
-    <h2>More Collections</h2>
-    <p>More websites coming soon!</p>
-  </div>
+    <section class="card">
+      <div class="emoji">📮</div>
+      <h2>Stamp Collection</h2>
+      <p>Browse my personal stamp collection.</p>
+      <a class="button"
+         href="https://jeat-98.github.io/stamp-collection/">
+        Visit Website →
+      </a>
+    </section>
+
+    <section class="card">
+      <div class="emoji">🗂️</div>
+      <h2>Stamp Collection Versions</h2>
+      <p>Explore the different versions of my stamp website.</p>
+      <a class="button"
+         href="https://jeat-98.github.io/stamp-collection-versions/">
+        Visit Website →
+      </a>
+    </section>
+
+    <section class="card">
+      <div class="emoji">🖼️</div>
+      <h2>Collection Gallery Latest</h2>
+      <p>Explore my latest collection gallery.</p>
+      <a class="button"
+         href="https://jeat-98.github.io/Collection-Gallery-Latest/">
+        Visit Website →
+      </a>
+    </section>
+
+    <section class="card">
+      <div class="emoji">✨</div>
+      <h2>Collection Gallery V2</h2>
+      <p>Explore the second version of my collection gallery.</p>
+      <a class="button"
+         href="https://jeat-98.github.io/Collection-Gallery_v2/">
+        Visit Website →
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    My Collections · Personal Collection Hub
+  </footer>
 </body>
 </html>
